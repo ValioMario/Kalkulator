@@ -50,10 +50,10 @@ public class Main {
         }
 
         if (calculator instanceof RomanCalcs) {
-            try {
+            if (result > 0) {
                 System.out.println("Результат: " + ((RomanCalcs) calculator).getRomanResult(result));
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
+            } else {
+                System.out.println("Результат не может быть представлен римскими цифрами.");
             }
         } else {
             System.out.println("Результат: " + result);
